@@ -22,6 +22,7 @@ export default function PluginListPage() {
           <thead><tr className="border-b bg-gray-50 text-left text-gray-500">
             <th className="px-4 py-3 font-medium">ID</th>
             <th className="px-4 py-3 font-medium">函数名</th>
+            <th className="px-4 py-3 font-medium">创建者</th>
             <th className="px-4 py-3 font-medium">分类</th>
             <th className="px-4 py-3 font-medium">状态</th>
             <th className="px-4 py-3 font-medium">下载量</th>
@@ -33,6 +34,7 @@ export default function PluginListPage() {
               <tr key={p.id} className="border-b last:border-0 hover:bg-gray-50">
                 <td className="px-4 py-3 font-mono text-xs">{p.id}</td>
                 <td className="px-4 py-3 font-medium">{p.functionName}</td>
+                <td className="px-4 py-3 text-gray-600">@{p.authorNickname || p.author}</td>
                 <td className="px-4 py-3">{p.category}</td>
                 <td className="px-4 py-3">
                   {p.dexExists ? (
